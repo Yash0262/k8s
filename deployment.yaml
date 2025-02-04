@@ -18,4 +18,4 @@ spec:
       - name: httpd
         image: docker.io/yash012/jenkins:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080

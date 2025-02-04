@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: jenkins-kubernetes
   labels:
-    app: jenkins
+    app: httpd
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: jenkins
+      app: httpd
   template:
     metadata:
       labels:
-        app: jenkins
+        app: httpd
     spec:
       containers:
-      - name: jenkins
+      - name: httpd
         image: docker.io/yash012/jenkins:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
